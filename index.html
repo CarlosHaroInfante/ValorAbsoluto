@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Valor Absoluto</title>
+</head>
+<body>
+  <h1>Calculadora de Valor Absoluto</h1>
+  <p>Por favor, introduce un número:</p>
+  <input type="number" id="numeroInput">
+  <button onclick="calcularValorAbsoluto()">Calcular</button>
+  <p id="resultado"></p>
+
+  
+  <script>
+  function calcularValorAbsoluto() {
+      var numero = parseFloat(document.getElementById("numeroInput").value);
+      var valorAbsoluto;
+
+      if (numero >= 0) {
+        valorAbsoluto = numero;
+      } else {
+        valorAbsoluto = -numero;
+      }
+
+      
+    document.getElementById("resultado").innerText = "El valor absoluto de " + numero + " es " + valorAbsoluto;
+    }
+    </script>
+</body>
+</html>
